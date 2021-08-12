@@ -39,7 +39,7 @@ body * {
 }
 
 .custom .total {
-  background-image: url("../assets/AstroHead.png");
+  background-image: url("./AstroHead.png");
   text-indent: -9999px;
   display: block;
   z-index: 20000;
@@ -51,28 +51,14 @@ body * {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.custom.finished .options li,
-.custom.removing .options li {
-  /* opacity: 0.3; */
-  /* transition: all 1s; */
+
+.custom.active .options li.help {
+  display: none;
 }
-.custom.finished .options li.highest,
-.custom.removing .options li.highest {
-  /* opacity: 1; */
+.custom.finished .options li.help {
+  display: none;
 }
 
-.custom.finished .options li.help,
-.custom.removing .options li.help {
-  /* height: 0; */
-}
-.custom.finished .metaInfo,
-.custom.removing .metaInfo {
-  /* opacity: 0.3; */
-}
-.custom.active .options li.help {
-  /* height: 35px; */
-  /* display: none; */
-}
 .custom .options {
   display: flex;
   flex-direction: row;
