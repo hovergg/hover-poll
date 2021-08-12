@@ -20,8 +20,14 @@ body * {
 .custom {
   width: 1000px;
   transition: opacity 0.3s;
+  transition-timing-function: ease-in-out;
   font-family: "Ubuntu", sans-serif;
   opacity: 0;
+}
+
+.custom.removing {
+  opacity: 0;
+  transform: translateY(16px);
 }
 
 .custom.finished {
@@ -54,10 +60,9 @@ body * {
   background-repeat: no-repeat;
 }
 
-.custom.active .options li.help {
-  display: none;
-}
-.custom.finished .options li.help {
+.custom.active .options li.help,
+.custom.finished .options li.help,
+.custom.removing .options li.help {
   display: none;
 }
 
@@ -144,6 +149,7 @@ body * {
   height: 100%;
   border-radius: 128px;
   transition: width 0.3s;
+  transition-timing-function: ease-in-out;
   position: relative;
 }
 .custom .options li .text {
