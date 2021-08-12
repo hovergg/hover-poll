@@ -148,8 +148,8 @@ body * {
   background: #0cd3ff;
   height: 100%;
   border-radius: 128px;
-  transition: width 0.3s;
-  transition-timing-function: ease-in-out;
+  transition: width 0.4s;
+  transition-timing-function: ease-out;
   position: relative;
 }
 .custom .options li .text {
