@@ -51,7 +51,28 @@ body * {
   background-size: contain;
   background-repeat: no-repeat;
 }
+.custom.finished .options li,
+.custom.removing .options li {
+  /* opacity: 0.3; */
+  /* transition: all 1s; */
+}
+.custom.finished .options li.highest,
+.custom.removing .options li.highest {
+  /* opacity: 1; */
+}
 
+.custom.finished .options li.help,
+.custom.removing .options li.help {
+  /* height: 0; */
+}
+.custom.finished .metaInfo,
+.custom.removing .metaInfo {
+  /* opacity: 0.3; */
+}
+.custom.active .options li.help {
+  /* height: 35px; */
+  /* display: none; */
+}
 .custom .options {
   display: flex;
   flex-direction: row;
@@ -156,8 +177,8 @@ body * {
 
 .custom.active .credits,
 .custom.removing .credits {
-  height: 0;
-  opacity: 0;
+  /* height: 0; */
+  /* opacity: 0; */
 }
 
 /*
