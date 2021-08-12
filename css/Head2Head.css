@@ -170,6 +170,7 @@ body * {
 }
 
 .custom.active .credits,
+.custom.finished .credits,
 .custom.removing .credits {
   opacity: 0;
 }
