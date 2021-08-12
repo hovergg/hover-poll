@@ -171,8 +171,7 @@ body * {
 
 .custom.active .credits,
 .custom.removing .credits {
-  /* height: 0; */
-  /* opacity: 0; */
+  opacity: 0;
 }
 
 /*
