@@ -19,14 +19,16 @@ body * {
 
 .custom {
   width: 1000px;
-  transition: opacity 1s;
-
+  transition: opacity 0.3s;
   font-family: "Ubuntu", sans-serif;
-
   opacity: 0;
 }
 
-.custom.finished,
+.custom.finished {
+  opacity: 0.3;
+  transform: translateY(16px);
+}
+
 .custom.active {
   opacity: 1;
 }
@@ -141,7 +143,7 @@ body * {
   background: #0cd3ff;
   height: 100%;
   border-radius: 128px;
-  transition: width 1s;
+  transition: width 0.3s;
   position: relative;
 }
 .custom .options li .text {
