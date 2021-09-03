@@ -1,0 +1,285 @@
+/*
+Use your custom theme:
+Select "Custom" theme in the dashboard
+On your https://poll.ma.pe/overlay/<id>/ URL add ?customCss=https://example.com/style.css
+
+Please keep the link to https://poll.ma.pe visible for a short period of time.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
+
+/*
+* "custom" refers to the theme assigned to the poll element
+*/
+body * {
+  box-sizing: border-box;
+  /* text-shadow: 1px 1px #181A28; */
+  background: transparent;
+}
+
+.custom {
+  width: 1000px;
+  height: 210px;
+  transition: opacity 0.3s;
+  transition-timing-function: ease-in-out;
+  font-family: "Ubuntu", sans-serif;
+  opacity: 0;
+}
+
+.custom.removing {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.custom.finished {
+  opacity: 0.3;
+  transform: translateY(16px);
+}
+
+.custom.active {
+  opacity: 1;
+}
+
+.custom .total strong,
+.custom .duration strong,
+.custom .total label,
+.custom .duration label {
+  display: none;
+}
+
+.custom .total {
+  background-image: url("../assets/SteelSeries.png");
+  text-indent: -9999px;
+  display: block;
+  z-index: 20000;
+  width: 1000px;
+  left: 430px;
+  top: 50px;
+  position: absolute;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.custom.active .options li.help,
+.custom.finished .options li.help,
+.custom.removing .options li.help {
+  display: none;
+}
+
+.custom .options {
+  display: flex;
+  flex-direction: row;
+}
+.custom .options li {
+  position: relative;
+  display: flex;
+  color: #fff;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  width: 400px;
+  height: 32px;
+  align-items: center;
+}
+
+/* First option */
+.custom .options li:nth-child(3) {
+  display: flex;
+  position: absolute;
+  top: 32px;
+  width: 350px;
+}
+.custom .options li:nth-child(3) .bar {
+  overflow: hidden;
+  border-radius: 128px;
+}
+
+/* Second option */
+.custom .options li:nth-child(4) {
+  width: 350px;
+  position: absolute;
+  bottom: 64px;
+  /* padding-left: -250px; */
+  /* margin-right: 250px; */
+}
+.custom .options li:nth-child(4) .bar {
+  overflow: hidden;
+  display: flex;
+  border-radius: 128px;
+}
+
+/*   ----------------   */
+
+/* 3rd option */
+.custom .options li:nth-child(5) {
+  position: absolute;
+  width: 350px;
+  right: 20px;
+  top: 32px;
+  /* margin-top: 60px; */
+  display: flex;
+  flex-direction: row-reverse;
+}
+.custom .options li:nth-child(5) .bar {
+  overflow: hidden;
+  display: flex;
+  border-radius: 128px;
+  flex-direction: row-reverse;
+}
+
+/* 4th option */
+.custom .options li:nth-child(6) {
+  width: 350px;
+  position: absolute;
+  right: 20px;
+  bottom: 64px;
+  flex-direction: row-reverse;
+}
+.custom .options li:nth-child(6) .bar {
+  overflow: hidden;
+  display: flex;
+  border-radius: 128px;
+  flex-direction: row-reverse;
+}
+
+/* ---------- */
+
+.custom .options li:nth-child(4) .text {
+  /* text-align: right; */
+}
+
+.custom .options li:nth-child(5) .text {
+  text-align: right;
+}
+
+.custom .options li:nth-child(6) .text {
+  text-align: right;
+}
+
+.custom .options li:nth-child(7) .text {
+  text-align: right;
+}
+
+/* Percentage */
+.custom .options li .procent {
+  position: absolute;
+  z-index: 1000;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.custom .options li:nth-child(3) .procent {
+  flex-direction: row-reverse;
+  right: 16px;
+}
+
+.custom .options li:nth-child(4) .procent {
+  flex-direction: row-reverse;
+  right: 16px;
+}
+
+.custom .options li:nth-child(5) .procent {
+  /* flex-direction: row-reverse; */
+  left: 16px;
+}
+
+.custom .options li:nth-child(6) .procent {
+  /* flex-direction: row-reverse; */
+  left: 16px;
+}
+
+.custom .options li.question {
+  display: none;
+}
+
+.custom .options li:nth-child(3) .number {
+  text-indent: -9999px;
+  display: block;
+  z-index: 20000;
+  /* background-image: url('./middlee.png'); */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.custom .options li .bar {
+  position: absolute;
+  background: #323546;
+  height: 100%;
+  width: 100%;
+  /* margin-top: 5px; */
+}
+
+.custom .options li .bar .bar-inner {
+  background: #0cd3ff;
+  height: 100%;
+  border-radius: 128px;
+  transition: width 0.4s;
+  transition-timing-function: ease-out;
+  position: relative;
+}
+.custom .options li .text {
+  position: absolute;
+  bottom: -42px;
+  width: 100%;
+  font-size: 24px;
+  padding: 4px;
+  font-weight: 500;
+}
+
+/*
+* Optional outer border
+*/
+.custom .border {
+  /* border: 1px solid red; */
+  padding: 16px;
+}
+
+.custom.active .credits,
+.custom.finished .credits,
+.custom.removing .credits {
+  opacity: 0;
+}
+
+/*
+* Positioning
+*/
+/* .custom.topLeft {
+	top: 20px;
+	left: 20px;
+}
+.custom.topCenter {
+	top: 20px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.custom.topRight {
+	top: 20px;
+	right: 20px;
+}
+.custom.middleLeft {
+	top: 50%;
+	transform: translate(0, -50%);
+	left: 20px;
+}
+.custom.middleCenter {
+	top: 50%;
+	transform: translate(-50%, -50%);
+	left: 50%;
+}
+.custom.middleRight {
+	top: 50%;
+	transform: translate(0, -50%);
+	right: 20px;
+}
+.custom.bottomLeft {
+	bottom: 20px;
+	left: 20px;
+}
+.custom.bottomCenter {
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.custom.bottomRight {
+	bottom: 20px;
+	right: 20px;
+} */
